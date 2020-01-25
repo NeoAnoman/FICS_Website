@@ -17,8 +17,8 @@
 <body>
   <div id="carousel-H" class="carousel slide " data-ride="carousel" style="height: 75%" >
     <div class="carousel-inner " role="listbox">
-      <div class="carousel-item active" style="width: 100%; height: 100%">
-        <img src="./images/jiitC2.jpeg" alt="jiitImg" style="width: 100%; height: 100%">
+      <div class="carousel-item active" style="width: 100%; height: 100%;">
+        <img src="./images/jiitC2.jpeg" alt="jiitImg" style="width: 100%; height: 100%; object-fit: cover; ">
       </div>
       <div class="carousel-item " style="width: 100%; height: 100%">
           <img src="./images/jiitC1.jpg" alt="jiitImg" style="object-fit: cover; width: 100%; height: 100%">
@@ -91,37 +91,83 @@
     </div>
   </nav>
   <div class="container">
-    <div class="changing_component big " id="main" >
-      <div id="carousel-1" class="carousel slide carousel-fade " >
-        <div class="carousel-inner " role="listbox">
-          <div class="carousel-item active " id="home">
-            <iframe src="./components/homeComponent.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html"></iframe>
-          </div>
-          <div class="carousel-item ">
-              <iframe src="./components/aboutjiit.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html" ></iframe>
+    <div class="row">
+      <div class="col-9 changing_component big " id="main" >
+        <div id="carousel-1" class="carousel slide carousel-fade " >
+          <div class="carousel-inner " role="listbox">
+            <div class="carousel-item active " id="home">
+              <iframe src="./components/homeComponent.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html"></iframe>
             </div>
-          <div class="carousel-item ">
-            <iframe src="./components/about.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html" ></iframe>
-          </div>
-          <div class="carousel-item ">
-            <iframe src="./components/tracks.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html" ></iframe>
-          </div>
-          <div class="carousel-item ">
-            <iframe src="./components/orgCommittee.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html" ></iframe>
-          </div>
-          <div class="carousel-item ">
-            <iframe src="./components/pCommittee.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html" ></iframe>
-          </div>
-          <div class="carousel-item ">
-            <iframe src="./components/dates.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html" ></iframe>
-          </div>
-          <div class="carousel-item ">
-            <iframe src="./components/authors.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html" ></iframe>
-          </div>
-          <div class="carousel-item ">
-            <iframe src="./components/contact.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html" ></iframe>
+            <div class="carousel-item ">
+                <iframe src="./components/aboutjiit.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html" ></iframe>
+              </div>
+            <div class="carousel-item ">
+              <iframe src="./components/about.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html" ></iframe>
+            </div>
+            <div class="carousel-item ">
+              <iframe src="./components/tracks.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html" ></iframe>
+            </div>
+            <div class="carousel-item ">
+              <iframe src="./components/orgCommittee.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html" ></iframe>
+            </div>
+            <div class="carousel-item ">
+              <iframe src="./components/pCommittee.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html" ></iframe>
+            </div>
+            <div class="carousel-item ">
+              <iframe src="./components/dates.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html" ></iframe>
+            </div>
+            <div class="carousel-item ">
+              <iframe src="./components/authors.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html" ></iframe>
+            </div>
+            <div class="carousel-item ">
+              <iframe src="./components/contact.html" class="margin_set" id="noteMe" width="100%" height="100%" type="text/html" ></iframe>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="col-3">
+        <center>
+          <div class="sideE">
+            <div class="sideH">
+              <strong class="textSide">Organisers</strong>
+            </div>
+            <div class="side-img">
+              <a target="_blank" href="http://www.jiit.ac.in/">
+                <img class="image_side" src="./images/jiit.png" alt="jiitImg">
+              </a>
+            </div>
+            <div class="side-img">
+              <a target="_blank" href="https://www.unomaha.edu/">
+                <img class="image_side2" src="./images/nebrasca.jpg" alt="nebrascaImg">
+              </a>
+            </div>
+            <div class="side-img">
+              <a target="_blank" href="https://owasp.org/www-chapter-delhi/">
+                <img class="image_side2" src="./images/owasp.jpg" alt="owaspImg">
+              </a>
+            </div>
+          </div>
+          <div class="sideE">
+            <div class="sideH">
+              <strong class="textSide">Publisher</strong>
+            </div>
+            <div class="side-img">
+              <a target="_blank" href="https://www.ieee.org/">
+                <img class="image_side" src="./images/ieee.png" alt="jiitImg">
+              </a>
+            </div>
+          </div>
+          <div class="sideE">
+            <div class="sideH">
+              <strong class="textSide">Sponsors</strong>
+            </div>
+            <div class="side-img">
+              <a target="" href="#">
+                <img class="image_side" src="./images/soon.jpg" alt="jiitImg">
+              </a>
+            </div>
+          </div>
+        </center>
       </div>
     </div>
   </div>

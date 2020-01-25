@@ -11,7 +11,7 @@ iframe {
 }
 .carousel-item {
   height: 100%;
-  width: 78%;
+  width: 100%;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -190,4 +190,23 @@ nav a{
 }
 ::-webkit-scrollbar-thumb:hover {
 	background: #355cc9;
+}
+.sideE {
+  margin-bottom: 15%;
+}
+.sideH {
+    text-align: center;
+    font-size: 1.7rem;
+    margin: 25px;
+}
+.textSide {
+    display: inline;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #14205F;
+}
+.image_side {
+  width:65%; object-fit: contain;margin-bottom: 10%;
+}
+.image_side2 {
+  width:65%; object-fit: contain;
 }
