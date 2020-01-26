@@ -115,6 +115,18 @@ transform-style: preserve-3d;"class="carousel-caption typewrite" data-period="20
       </!--div-->
     </div>
   </div>
+  <style>
+    .flex-container{
+      display:flex;
+      flex-wrap:nowrap;
+    }
+    .nav>ul {
+    display: inline;
+    }
+    .nav>li {
+      display: inline;
+    }
+    </style>
   <nav class="navbar navbar-expand-lg navbar_control navbar-dark" id="navMain">
     <div class="container">
       <a class="navbar-brand" href="#" data-target="#carousel-1" data-slide-to="0"></a>
@@ -126,12 +138,18 @@ transform-style: preserve-3d;"class="carousel-caption typewrite" data-period="20
         <ul class="nav navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="nav-link" id="nav1" data-target="#carousel-1" data-slide-to="0" href="#" >Home
-
             </a>
           </li>
           <li class="nav-item">
               <a class="nav-link" id="nav2" href="#" data-target="#carousel-1" data-slide-to="1" >About JIIT</a>
-            </li>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"  aria-haspopup="true" aria-expanded="false" id="nav1" data-target="#" data-slide-to="" href="#">Committees</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#" id="nav4" data-slide-to="4" data-target="#carousel-1">Organising Committee</a>
+              <a class="dropdown-item" href="#" id="nav6" data-slide-to="6" data-target="#carousel-1" >Advisory Committee</a>
+              <a class="dropdown-item" href="#">Steering Committee</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" id="nav2" href="#" data-target="#carousel-1" data-slide-to="2" >Technical Programme</a>
           </li>
@@ -139,17 +157,40 @@ transform-style: preserve-3d;"class="carousel-caption typewrite" data-period="20
             <a class="nav-link" id="nav3" data-target="#carousel-1" href="#" data-slide-to="3" >Tracks</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="nav4" data-target="#carousel-1" href="#" data-slide-to="4" >Organising Committee</a>
+            <a class="nav-link" id="nav4" data-target="#carousel-1" href="#" data-slide-to="4" >Keynote/Invited Speakers</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"  aria-haspopup="true" aria-expanded="false" id="nav8" data-target="carousel-1" data-slide-to="7" href="#">For Authors</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Camera Ready Submission Instruction</a>
+              <a class="dropdown-item" href="#">Scanned signed Springer copyright form</a>
+              <a class="dropdown-item" href="#">Accepted Research Papers</a>
+              <a class="dropdown-item" href="#">Call for Papers</a>
+              <a class="dropdown-item" href="#">Downloads</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"  aria-haspopup="true" aria-expanded="false" id="nav8" data-target="carousel-1" data-slide-to="7" href="#">For Attendees</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Program Schedule</a>
+              <a class="dropdown-item" href="#">Program Schedule(Long)</a>
+              <a class="dropdown-item" href="#">Proceedings</a>
+              <a class="dropdown-item" href="#">Presentation files</a>
+              <a class="dropdown-item" href="#">Call for Participation Flyer</a>
+              <a class="dropdown-item" href="#">Visa Enquiry</a>
+              <a class="dropdown-item" href="#">Travel and Accomodation</a>
+              <a class="dropdown-item" href="#">Gallery</a>
+            </div>
           </li>
   		    <li class="nav-item">
-            <a class="nav-link" id="nav6" data-target="#carousel-1" href="#" data-slide-to="6" >Advisory committee</a>
+            <a class="nav-link" id="nav6" data-target="#carousel-1" href="#" data-slide-to="6" >Registration</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" id="nav2" href="#" data-target="#carousel-1" data-slide-to="5" >Our Sponsors</a>
             </li>
-          <li class="nav-item">
-            <a class="nav-link" id="nav8" data-target="#carousel-1" href="#" data-slide-to="7" >For Authors</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" id="nav2" href="#" data-target="#" data-slide-to="" >Venue</a>
+            </li>
         </ul>
       </div>
     </div>
