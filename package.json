@@ -1,0 +1,26 @@
+{
+  "name": "fics_website",
+  "version": "1.0.0",
+  "description": "FICS Website",
+  "main": "index.html",
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1",
+    "bootstrap": "^4.4.1",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeoAnoman/FICS_Website.git"
+  },
+  "author": "NeoAnoman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeoAnoman/FICS_Website/issues"
+  },
+  "homepage": "https://github.com/NeoAnoman/FICS_Website#readme"
+}
