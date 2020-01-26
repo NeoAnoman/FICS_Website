@@ -14,64 +14,6 @@
     <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/styleindex.css">
 </head>
-<script type="text/javascript">
-  var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
-
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-        }
-
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
-
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
-    };
-</script>
 <body>
   <div id="carousel-H" class="carousel slide " data-ride="carousel" style="height: 75%" data-interval="5600" >
     <div class="carousel-inner " role="listbox">
@@ -99,12 +41,9 @@
       <div class="carousel-item " style="width: 100%; height: 100%">
         <img src="./images/noida3.jpg" alt="jiitImg" style="object-fit: cover; width: 100%; height: 100%;opacity: 0.7">
       </div>
-      <div style="font-size: 2rem;color:rgb(5, 5, 59); text-align: center;top: 50%;
-      transform: translateY(-50%);bottom: initial;-webkit-transform-style: preserve-3d;
--moz-transform-style: preserve-3d;
-transform-style: preserve-3d;"class="carousel-caption typewrite" data-period="2000" data-type='["International Conference on","Frontiers in Information and Computer Security (FICS)","November 5th - 7th, 2020","Jaypee Institute of Information Technology, Noida, India","Technically co-sponsored by University of Nebraska, Omaha, USA,","IEEE Uttar Pradesh Section and OWASP Delhi Chapter"]'
+      <div class="textStyle carousel-caption typewrite" data-period="2000" data-type='["International Conference on","Frontiers in Information and Computer Security (FICS)","November 5th - 7th, 2020","Jaypee Institute of Information Technology, Noida, India","Technically co-sponsored by University of Nebraska, Omaha, USA,","IEEE Uttar Pradesh Section and OWASP Delhi Chapter"]'
       ></div>
-      <!--div-- class="carousel-caption shadow row-content" 
+      <!--div-- class="carousel-caption shadow row-content"
       style="position: absolute;top: 10%; left: 15%; transform: translate(-50%;-50%);background-color: grey;opacity: 0.65;">
         <p style="font-size: 150%;color: black;font-weight: bold;">International Conference on </p>
         <h2 class="h2-responsive font-weight-bold mt-sm-5" style="font-size: 2rem;color: black;font-weight: bold;">Frontiers in Information and Computer Security (FICS)</h2>
@@ -114,6 +53,14 @@ transform-style: preserve-3d;"class="carousel-caption typewrite" data-period="20
           IEEE Uttar Pradesh Section and OWASP Delhi Chapter</p>
       </!--div-->
     </div>
+    <a class="carousel-control-prev" href="#carousel-H" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-H" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
   <style>
     .flex-container{
@@ -197,7 +144,7 @@ transform-style: preserve-3d;"class="carousel-caption typewrite" data-period="20
   </nav>
   <div class="container">
     <div class="row row-content">
-      <div class="col-sm-11 changing_component big " id="main" >
+      <div class="col-md-11 changing_component big " id="main" >
         <div id="carousel-1" class="carousel slide carousel-fade " >
           <div class="carousel-inner " role="listbox">
             <div class="carousel-item active " id="home">
@@ -230,7 +177,7 @@ transform-style: preserve-3d;"class="carousel-caption typewrite" data-period="20
           </div>
         </div>
       </div>
-      <div class="col-1">
+      <div class="col-md-1">
         <center>
           <div class=" sideE">
             <div class="sideH">
@@ -335,5 +282,63 @@ transform-style: preserve-3d;"class="carousel-caption typewrite" data-period="20
      $(".nav").find(".active").removeClass("active");
      $(this).addClass("active");
     });
+</script>
+<script type="text/javascript">
+  var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
 </script>
 </html>
