@@ -192,6 +192,7 @@ nav a{
 	background: #355cc9;
 }
 .sideE {
+  margin-top: 15%;
   margin-bottom: 15%;
 }
 .sideH {
@@ -221,5 +222,18 @@ nav a{
   transform: translateY(-50%);bottom: initial;-webkit-transform-style: preserve-3d;
 -moz-transform-style: preserve-3d;
 transform-style: preserve-3d;
-font-size: 3rem;
+font-size: 2.5rem;
+}
+.footerS {
+  background-color: rgb(8, 46, 102); color: white;
+}
+.text-uppercase-2 {
+  margin-top: 0%;
+  font-size: 100%;color: white;
+}
+@media (max-width: 640px) {
+  .text-uppercase-2 {
+    margin-top: 5%;
+    font-size: 100%;color: white;
+  }
 }
