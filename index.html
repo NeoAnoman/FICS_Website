@@ -41,17 +41,17 @@
       <div class="carousel-item " style="width: 100%; height: 100%">
         <img src="./images/noida3.jpg" alt="jiitImg" style="object-fit: cover; width: 100%; height: 100%;opacity: 0.7">
       </div>
-      <div class="textStyle carousel-caption typewrite" data-period="2000" data-type='["International Conference on","Frontiers in Information and Computer Security (FICS)","November 5th - 7th, 2020","Jaypee Institute of Information Technology, Noida, India","Technically co-sponsored by University of Nebraska, Omaha, USA,","IEEE Uttar Pradesh Section and OWASP Delhi Chapter"]'
-      ></div>
-      <!--div-- class="carousel-caption shadow row-content"
-      style="position: absolute;top: 10%; left: 15%; transform: translate(-50%;-50%);background-color: grey;opacity: 0.65;">
-        <p style="font-size: 150%;color: black;font-weight: bold;">International Conference on </p>
-        <h2 class="h2-responsive font-weight-bold mt-sm-5" style="font-size: 2rem;color: black;font-weight: bold;">Frontiers in Information and Computer Security (FICS)</h2>
-        <p style="font-size: 150%;color:black;font-weight:bold">November 5th - 7th, 2020</p>
-        <p style="font-size: 150%; color: black;font-weight: bold;">Jaypee Institute of Information Technology, Noida, India
+      <!--div class="textStyle carousel-caption typewrite" data-period="2000" data-type='["International Conference on","Frontiers in Information and Computer Security (FICS)","November 5th - 7th, 2020","Jaypee Institute of Information Technology, Noida, India","Technically co-sponsored by University of Nebraska, Omaha, USA,","IEEE Uttar Pradesh Section and OWASP Delhi Chapter"]'
+      ></div-->
+      <div class="carousel-caption row-content"
+      style="position: absolute;top: 10%; left: 15%; transform: translate(-50%;-50%);">
+        <p class="ml2" style="font-size: 120%;font-weight: bold;">International Conference on </p>
+        <h2 class="ml2 h2-responsive font-weight-bold mt-sm-5" style="font-size: 1.4rem;font-weight: bold;">Frontiers in Information and Computer Security (FICS)</h2>
+        <p class="ml2" style="font-size: 120%;font-weight:bold">November 5th - 7th, 2020</p>
+        <p class="ml2" style="font-size: 120%;font-weight: bold;">Jaypee Institute of Information Technology, Noida, India
           Technically co-sponsored by University of Nebraska, Omaha, USA,
           IEEE Uttar Pradesh Section and OWASP Delhi Chapter</p>
-      </!--div-->
+      </div>
     </div>
     <a class="carousel-control-prev" href="#carousel-H" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -109,7 +109,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"  aria-haspopup="true" aria-expanded="false" id="nav8" data-target="carousel-1" data-slide-to="7" href="#">For Authors</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#carousel-1" data-slide-to="7">Camera Ready Submission Instruction</a>
+              <a class="dropdown-item" href="./important_papers/Camera_Ready_submission_Instruction.docx" data-slide-to="7" >Camera Ready Submission Instruction</a>
               <a class="dropdown-item" href="#carousel-1" data-slide-to="7">Call for Papers</a>
               <a class="dropdown-item" href="#carousel-1" data-slide-to="7">Downloads</a>
             </div>
@@ -271,8 +271,9 @@
      $(this).addClass("active");
     });
 </script>
-<script type="text/javascript">
-  var TxtType = function(el, toRotate, period) {
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+  /*var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
         this.loopNum = 0;
@@ -328,5 +329,24 @@
         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
         document.body.appendChild(css);
     };
+*/
+
+    // Wrap every letter in a span
+var textWrapper = document.querySelectorAll('.ml2');
+console.log(textWrapper);
+textWrapper.forEach((i)=> {
+  i.innerHTML = i.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+})
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  })
 </script>
 </html>
