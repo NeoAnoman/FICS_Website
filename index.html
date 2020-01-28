@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/styleindex.css">
 </head>
+<style>
+navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+</style>
 <body>
   <div id="carousel-H" class="carousel slide " data-ride="carousel" style="height: 75%" data-interval="5600" >
     <div class="carousel-inner " role="listbox">
@@ -62,18 +69,7 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-  <style>
-    .flex-container{
-      display:flex;
-      flex-wrap:nowrap;
-    }
-    .nav>ul {
-    display: inline;
-    }
-    .nav>li {
-      display: inline;
-    }
-    </style>
+
   <nav class="navbar navbar-expand-xl navbar_control navbar-dark" id="navMain">
     <div class="container-fluid">
       <a class="navbar-brand" href="#" data-target="#carousel-1" data-slide-to="0"></a>
@@ -82,7 +78,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="nav navbar-nav ml-auto">
+        <ul class="nav navbar-nav mx-auto" style="text-align: center;">
           <li class="nav-item active">
             <a class="nav-link" id="nav1" data-target="#carousel-1" data-slide-to="0" href="#" >Home
             </a>
@@ -95,7 +91,6 @@
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#" id="nav4" data-slide-to="4" data-target="#carousel-1">Organising Committee</a>
               <a class="dropdown-item" href="#" id="nav6" data-slide-to="9" data-target="#carousel-1" >Advisory Committee</a>
-              <a class="dropdown-item" href="#" data-slide-to="6" data-target="#carousel-1">Steering Committee</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="nav2" href="#" data-target="#carousel-1" data-slide-to="2" >Technical Programme</a>
